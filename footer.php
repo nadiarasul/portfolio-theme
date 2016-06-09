@@ -1,6 +1,10 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div class="container footer-menu">
+    <div class="copyright"><p>&copy; Nadia Rasul <?php echo date('Y'); ?></p></div>
+    <?php wp_nav_menu( array(
+      'theme_location' => 'social-links'
+    )); ?>
+    <p>nadiarasul@me.com</p>
   </div>
 </footer>
 

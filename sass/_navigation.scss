@@ -3,12 +3,25 @@ ul.menu {
 	padding: 0;
 	li {
 		display: inline;
-		margin-right: 10px;
 		a {
-			color: #333;
 			padding: 10px;
-			background: #333;
-			color: white;
+			color: $gray;
+			letter-spacing:0.5px;
+			&:hover{
+				color:$blue;
+			}
 		}
 	}
+		li.current_page_item,
+		li.current-menu-item{
+			a{color:$blue;}
+		}
 }
+
+#nav-below{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+

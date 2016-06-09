@@ -22,7 +22,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'social-links' => 'Social Links'
 	) );
 
 	/*
@@ -46,6 +47,9 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+	wp_enqueue_style('playfair', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic');
+	wp_enqueue_style('lato', 'https://fonts.googleapis.com/css?family=Lato:400,300,700');
+	wp_enqueue_style('devicons', 'https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -276,3 +280,23 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+/* Custom function to get post thumbnail url */
+
+function get_featured_image_url($currentPost){
+	$image_id = get_post_thumbnail_id($currentPost->ID);
+	$image_url = wp_get_attachment_url($image_id);
+	return $image_url;
+} 
+
+add_filter('show_admin_bar', '__return_false');
+  add_filter( 'wp_get_nav_menu_items', 'cpt_archive_menu_filter', 10, 3 );
+  function cpt_archive_menu_filter( $items, $menu, $args ) {
+    foreach ( $items as &$item ) {
+    if ( $item->type != 'custom' ) continue;
+      if (  get_query_var( 'post_type' ) == 'portfolio'  && $item->title == 'Portfolio')  {
+        $item->classes []= 'current-menu-item';
+        } 
+    }
+    return $items;
+  } 

@@ -1,0 +1,22 @@
+header{
+	background:white;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:99;
+	padding: 1.5rem 0;
+	height:70px;
+	border-bottom:1px solid $lightgray;
+}
+.main-menu{
+	display:flex;
+	justify-content:flex-start;
+	align-items:center;
+
+}
+.menu-main-menu-container{
+  margin-left: auto;
+}
+
+
+

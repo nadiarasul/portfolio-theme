@@ -14,16 +14,23 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
+  <div class="container main-menu">
+  <div class="site-branding">
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
+   </div> 
 
     <?php wp_nav_menu( array(
-      'container' => false,
+      'container' => 'nav',
       'theme_location' => 'primary'
+    )); ?>
+
+    <?php wp_nav_menu( array(
+      'container_class' => 'social',
+      'theme_location' => 'social-links'
     )); ?>
   </div> <!-- /.container -->
 </header><!--/.header-->
