@@ -76,5 +76,15 @@
 	</div>
 </section>	
 
+<section class="contact">
+	<div class="container">
+		<div class="content">
+			<div class="contact-details">
+			<h2>Get in touch</h2>
+			<p><?php the_field('contact_info') ?></p>
+		</div>		
+	</div>
+</section>
+
 
 <?php get_footer(); ?>

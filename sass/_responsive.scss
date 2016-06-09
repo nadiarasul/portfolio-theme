@@ -1,0 +1,21 @@
+@media only screen and (max-width:480px){
+	body{
+		font-size:1.2rem;
+	}
+	.home-header,
+	.header-image{
+		height:inherit;
+	}
+	.social{
+		display:none;
+	}
+	.work{
+		width:100%;
+	}
+}
+
+@media only screen and (min-width:481px) and (max-width:680px){
+	.work{
+		width:50%;
+	}
+}

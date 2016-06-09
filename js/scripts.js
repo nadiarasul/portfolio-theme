@@ -18,4 +18,17 @@ $(function(){
 		}, 900, 'swing'); 
  	});
 
+ 	$('.work a.taphover').on("touchstart", function (e) {
+    "use strict"; //satisfy the code inspectors
+    var work = $(this); //preselect the link
+    if (work.hasClass('hover')) {
+        return true;
+    } else {
+        work.addClass("hover");
+        $('.work a.taphover').not(this).removeClass("hover");
+        e.preventDefault();
+        return false; //extra, and to make sure the function has consistent return points
+    }
+	});
+
 });

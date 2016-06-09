@@ -10,14 +10,24 @@
 							?>
 
 							<div class="portfolio-entry-content">
-								<h2><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h2>
+								<h2><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h2> 
+
+								<?php
+									$url = get_field('site_link');
+								    if ($url) {
+										echo '<a href="'.$url.'" target="_blank"><button class="live-link">View Live Site</button></a>';
+									} else {
+										echo '';
+									}
+								?>
+
 								  <?php the_content(); ?>
 								  <?php wp_link_pages(array(
 								    'before' => '<div class="page-link"> Pages: ',
 								    'after' => '</div>'
 								  )); ?>
 								  	<div class="technologies">  
-								  	<p>Technologies used:
+								  	<p><span class="title-medium">Technologies used:</span>
 								  	    <?php 
 								  	      while(has_sub_field('technologies_used')){
 								  	      ?>

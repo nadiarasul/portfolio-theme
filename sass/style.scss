@@ -115,10 +115,15 @@ Home Styling
 	background:$lightpink;
 	text-align:center;
 }
-.skill-icons{
+.skills,
+.contact{
+	padding:6rem 0;
+}
+.skill-icons, 
+.contact-details{
 	width:70%;
 	margin-left:15%;
-	padding:6rem 0;
+
 }
 .skill{
 	width:25%;
@@ -130,7 +135,24 @@ Home Styling
 }
 .icon{
 	font-size:8rem;
+
 }
+.contact{
+	background: $gray;
+	color:$white;
+	h2{
+		text-align:center;
+	}
+}
+.contact-details{
+	padding:0 4rem;
+	p{
+		font-size:2rem;
+		letter-spacing:0.05rem;
+		font-weight:300;
+	}
+}
+
 /*
 ====================================
 Portfolio Styling
@@ -163,7 +185,8 @@ Portfolio Styling
 }
 
 .work a:hover .work-overlay,
-.work-overlay:hover{
+.work-overlay:hover,
+.hover{
 		top:0;
 		bottom:0;
 		opacity:0.9;
@@ -180,7 +203,21 @@ Single Portfolio Page Styling
 
 
 .portfolio-entry-content {
-	
+	h2,
+	.live-link{
+		display:inline-block;
+	}
+}
+.live-link{
+	padding:6px;
+	margin:10px;
+	border:2px solid $blue;
+	background:white;
+	color:$blue;
+	&:hover{
+		background:$blue;
+		color:$gray;
+	}
 }
 .portfolio-entry-image{
 	display:flex;
@@ -189,8 +226,11 @@ Single Portfolio Page Styling
 	align-items:center;
 	img{
 		max-width:700px;
-		margin-bottom:20px;
+		margin-bottom:5rem;
 	}
+}
+.title-medium{
+	font-weight:bold;
 }
 /*
 ====================================
@@ -202,7 +242,7 @@ About Styling
 	float:left;
 	padding:0 3rem;
 	img{
-		width:80%;
+
 		box-shadow: 2px 3px 5px lighten($gray,40);
 		-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
     	filter: grayscale(100%);

@@ -4,7 +4,7 @@
     <?php wp_nav_menu( array(
       'theme_location' => 'social-links'
     )); ?>
-    <p>nadiarasul@me.com</p>
+    <!-- <p>nadiarasul@me.com</p> -->
   </div>
 </footer>
 
