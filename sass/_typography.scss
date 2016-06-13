@@ -2,10 +2,10 @@ body{
 	font-family: 'Lato', sans-serif;
 }
 a {
-	color: $gray;
+	color: $blue;
 	text-decoration: none;
 	&:hover {
-		color: $blue;
+		color: $gray;
 	}
 }
 
@@ -26,8 +26,21 @@ h3,
 h4{
 	margin:0;
 	padding:0;
+	font-weight:400;
+	font-family:'Playfair';
 }
-
+h1{
+	font-size:4rem;
+}
+h2{
+	font-size:2.4rem;
+}
+h3{
+	font-size:1.9rem;
+}
+h4{
+	font-size:1.8rem;
+}
 
 /*blockquotes*/
 

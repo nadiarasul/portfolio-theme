@@ -1,8 +1,8 @@
 
 <?php get_header();  ?>
 
-<div class="main about-main">
-  <div class="header-image" style="background: url('<?php echo get_featured_image_url($post); ?>') center center no-repeat; background-size:cover">
+<div class="about-main">
+  <div class="about-header" style="background: url('<?php echo get_featured_image_url($post); ?>') center center no-repeat; background-size:cover">
   </div>
   <div class="container about-container clearfix">
     <div class="about-headshot">

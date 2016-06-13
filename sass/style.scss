@@ -36,34 +36,45 @@ body {
 	font-size:1.6rem;
 	padding-top:70px;
 }
-
+header,
+footer{
+	background:white;
+}
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
 }
 
-.home-container{
+.portfolio-container{
 	width:100%
 }
 .about-main{
 	background:$lightpink;
 }
-
-.portfolio-main{
+.single-main{
 	background:$lightgray;
 }
 
 .about-container,
-.single-container{
+.single-container,
+.single-image-container{
 	padding:6rem 0;
 }
 
 .single-container{
 	width:80%;
 }
+.single-image-container{
+	width:90%;
+}
 
-.content {
-	width: 100%;
+.content,
+.post-content{
+	width:70%;
+	margin:0 auto;
+}
+.post-content {
+	padding: 0 3rem;	
 }
 .about-content{
 	width:70%;
@@ -80,14 +91,12 @@ Home Styling
 ====================================
 */
 .home-header{
-	width:65%;
 	font-family: 'Playfair Display', serif;
 	font-style:italic;
 	font-weight:400;
 	font-size:2.4rem;
 	letter-spacing:0.8px;
 	line-height:1.5em;
-	margin-left:15%;
 	display:flex;
 	flex-direction:column;
 	align-items:center;
@@ -99,6 +108,12 @@ Home Styling
 		width:50px;
 	}
 }
+.site-branding a{
+	color:$gray;
+	&:hover{
+		color:$blue;
+	}
+}
 .more{
 	font-family:'Lato';
 	font-style:normal;
@@ -106,7 +121,8 @@ Home Styling
 	text-transform:uppercase;
 	letter-spacing:0.3px;
 }
-.header-image{	
+.header-image,
+.about-header{	
 	background: $lightpink;
 	height:calc(100vh - 70px);
 	padding-bottom:2rem;
@@ -115,18 +131,16 @@ Home Styling
 	background:$lightpink;
 	text-align:center;
 }
+.skills-tools{
+	padding-top:2rem;
+}
 .skills,
 .contact{
 	padding:6rem 0;
 }
-.skill-icons, 
-.contact-details{
-	width:70%;
-	margin-left:15%;
 
-}
 .skill{
-	width:25%;
+	width:20%;
 	float:left;
 	margin-bottom:1rem;
 	p{
@@ -143,9 +157,6 @@ Home Styling
 	h2{
 		text-align:center;
 	}
-}
-.contact-details{
-	padding:0 4rem;
 	p{
 		font-size:2rem;
 		letter-spacing:0.05rem;
@@ -173,7 +184,7 @@ Portfolio Styling
 	left:0;
 	right:0;
 	opacity:0.8;
-	background:$gray;
+	background:$black;
 	transition:all 0.3s ease;
 	display:flex;
 	flex-direction:column;
@@ -182,19 +193,18 @@ Portfolio Styling
 	color:$white;
 	text-align:center;
 	padding:15% 2% 0;
+	h2{
+		letter-spacing:0.03em;
+	}	
 }
 
 .work a:hover .work-overlay,
-.work-overlay:hover,
-.hover{
+.work-overlay:hover{
 		top:0;
 		bottom:0;
 		opacity:0.9;
 }
 
-.work-image{
-	border:1px solid lighten($gray, 40);
-}
 /*
 ====================================
 Single Portfolio Page Styling
@@ -225,8 +235,12 @@ Single Portfolio Page Styling
 	justify-content:space-between;
 	align-items:center;
 	img{
+		width:100%;
 		max-width:700px;
 		margin-bottom:5rem;
+		&:last-child{
+			margin-bottom:0;
+		}
 	}
 }
 .title-medium{
@@ -274,6 +288,69 @@ About Styling
 .process-info{
 	width:90%;
 	padding-right:20px;
+}
+/*
+====================================
+Posts Page Styling
+====================================
+*/
+.post-details{
+
+	h2{
+		margin-top:0;
+	}
+}
+
+.post-header{
+	margin:4rem 0 2rem;
+}
+.post{
+	display: flex;
+	flex-direction:column;
+}
+.post-header{
+	text-align:center;
+}
+.blog-info{
+	width:80%;
+	margin:0 auto;
+	text-align:center;
+	padding-bottom: 96px;
+}
+
+.pagination{
+	margin:2rem 0;
+}
+/*
+====================================
+Single Post Styling
+====================================
+*/
+
+.single-post {
+	.post{
+		display:flex;
+		flex-direction:column;
+	}
+}
+
+.entry-meta {
+	text-align:center;
+	a {
+		color:lighten($gray, 30);
+		&:hover{
+			color:$green;
+		}
+	}
+}
+.excerpts:after{
+	content: '';
+	height:2px;
+    display: block;
+    font-weight: normal;
+    background-color: rgba(0,0,0,.1);
+    width: 100%;
+    margin-top: 4rem;
 }
 
 /*

@@ -2,7 +2,6 @@
 
 	<div class="main">
 		<div class="single-container container">
-			<div class="content">
 				<?php 
 					if ( have_posts() ) {
 						while (have_posts()){
@@ -40,37 +39,34 @@
 								  	</div> 
 
 						  		<div id="nav-below" class="navigation">
-						            <p class="nav-previous"><?php previous_post_link('%link', '&larr;  Previous item: %title'); ?></p>
-						            <p class="nav-next"><?php next_post_link('%link', 'Next item: %title &rarr;'); ?></p>
+						            <p class="nav-previous"><?php previous_post_link('%link', '&larr;  Previous project: %title'); ?></p>
+						            <p class="nav-next"><?php next_post_link('%link', 'Next project: %title &rarr;'); ?></p>
 						          </div><!-- #nav-below -->
 							</div><!-- .portfolio-entry-content -->
 
-			</div>
+
 		</div>
 	</div>
 
-	<div class="portfolio-main">
-		<div class="single-container container">
-			<div class="content">
-				<div class="portfolio-entry-image">
-					<?php 
-						while(has_sub_field('portfolio_image')){
-					?>	
-					<?php 
-						$workImage = get_sub_field('image');
-					?>
-						<img src="<?php echo $workImage['url']?>" />
-					<?php
-					}	
-					?>
-							</div>	<!-- .portfolio-entry-image -->
+	<div class="single-main">
+		<div class="single-image-container container">
+			<div class="portfolio-entry-image">
+				<?php 
+					while(has_sub_field('portfolio_image')){
+				?>	
+				<?php 
+					$workImage = get_sub_field('image');
+				?>
+					<img src="<?php echo $workImage['url']?>" />
+				<?php
+				}	
+				?>
+			</div>	<!-- .portfolio-entry-image -->
 
-					<?php
-					}
-					}
-					?>
-			</div>
+				<?php
+				}
+				}
+				?>
 		</div>
-		
 	</div>
 <?php get_footer(); ?>

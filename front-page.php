@@ -8,7 +8,7 @@
 			      <?php // Start the loop ?>
 			      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			        <?php the_content(); ?>
-			       <a href="<?php the_field('more_info')?>"><p class="more">More Info +</p></a>
+			       <p class="more"><a href="<?php the_field('more_info')?>">More Info +</a></p>
 			      <?php endwhile; // end the loop?>
 			    </div> 
 		    	<a data-scroll href="#portfolio">
@@ -22,8 +22,8 @@
 </div>
 
 <div class="main">
-  <div class="home-container">    
-		<div class="home-portfolio clearfix" id="portfolio">
+  <div class="portfolio-container">    
+		<div class="clearfix" id="portfolio">
          <?php 
             $workArgs = array(
               'post_type' => 'portfolio',
@@ -57,8 +57,9 @@
 
 <section class="skills">
 	<div class="container">
-		<div class="skill-icons clearfix">	
-			<h2>Skills</h2>
+		<div class="content">	
+			<h2>Skills & Tools</h2>
+			<div class="skills-tools clearfix">
 		    <?php 
 		      while(has_sub_field('skills')){
 		      ?>
@@ -72,6 +73,7 @@
 		      <?php
 		      } 
 		    ?>
+		    </div>
 		</div>
 	</div>
 </section>	
@@ -79,7 +81,6 @@
 <section class="contact">
 	<div class="container">
 		<div class="content">
-			<div class="contact-details">
 			<h2>Get in touch</h2>
 			<p><?php the_field('contact_info') ?></p>
 		</div>		

@@ -1,12 +1,19 @@
-#comments .navigation {
+#comments {
+	padding:2rem 0;
+	ul {
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	.navigation {
 	padding: 0 0 18px;
+	}
 }
 
 h3 {
 	&#comments-title, &#reply-title {
-		color: #000000;
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 2rem;
 		margin-bottom: 0;
 	}
 	&#comments-title {
@@ -30,6 +37,7 @@ h3 {
 }
 
 #comments .comment-body {
+	padding-left:44px;
 	ul, ol {
 		margin-bottom: 18px;
 	}
@@ -51,12 +59,15 @@ h3 {
 		left: 0;
 	}
 }
-
 .comment-author {
 	cite {
-		color: #000000;
+		color: lighten($gray, 40);
 		font-style: normal;
 		font-weight: 700;
+		font-size: 2rem;
+	    line-height: 34px;
+	    margin: 0 10px;
+	    font-weight: 700;
 	}
 	.says {
 		font-style: italic;
@@ -64,8 +75,14 @@ h3 {
 }
 
 .comment-meta {
-	font-size: 12px;
+	background:#FFF;
+	color:$gray;
+	text-align:left;
+	font-size: 1.2rem;
 	margin: 0 0 5px;
+	display:flex;
+	align-items:center;
+
 	a {
 		&:link, &:visited {
 			color: #888888;
@@ -75,7 +92,7 @@ h3 {
 }
 
 .reply {
-	font-size: 12px;
+	font-size: 1.2rem;
 	padding: 0 0 24px;
 	a {
 		color: #888888;
@@ -84,6 +101,10 @@ h3 {
 
 a.comment-edit-link {
 	color: #888888;
+}
+
+#comments .children{
+	margin-left:44px;
 }
 
 .commentlist .children li {
@@ -104,19 +125,15 @@ a.comment-edit-link {
 #comments .pingback {
 	p {
 		color: #888888;
-		font-size: 12px;
+		font-size: 1.2rem;
 		line-height: 18px;
 		display: block;
 		margin: 0;
 	}
 	.url {
 		font-style: italic;
-		font-size: 13px;
+		font-size: 1.3rem;
 	}
-}
-
-input[type=submit] {
-	color: #333333;
 }
 
 #respond {
@@ -146,19 +163,18 @@ h3#reply-title {
 }
 
 #cancel-comment-reply-link {
-	font-size: 12px;
+	font-size: 1.2rem;
 	line-height: 18px;
 	font-weight: 400;
 }
 
+.required {
+	color: $pink;
+	font-weight: 700;
+}
 #respond {
-	.required {
-		color: #ff4b33;
-		font-weight: 700;
-	}
 	label {
 		color: #888888;
-		font-size: 12px;
 	}
 	input {
 		width: 98%;
@@ -166,25 +182,25 @@ h3#reply-title {
 	}
 	textarea {
 		width: 98%;
+		margin-top:1rem;
 	}
 	dt {
 		color: #888888;
-		font-size: 12px;
+		font-size: 1.2rem;
 		line-height: 18px;
 	}
 	dd {
 		color: #888888;
-		font-size: 12px;
+		font-size: 1.2rem;
 		line-height: 18px;
 		code {
-			font-size: 11px;
+			font-size: 1.1rem;
 		}
 	}
 	.form-submit {
 		margin: 0 0 24px;
 		input {
 			width: auto;
-			font-size: 14px;
 		}
 	}
 	dl {
@@ -214,14 +230,12 @@ p.form-allowed-tags, .nocomments {
 
 .comment-meta a {
 	&:active, &:hover {
-		color: #ff4b33;
+		color: $blue;
 	}
 }
 
 .reply a:hover, a.comment-edit-link:hover {
-	color: #ff4b33;
+	color: $blue;
 }
 
-#respond p, #comments-list ul #respond {
-	margin: 0;
-}
+

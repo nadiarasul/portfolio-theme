@@ -4,7 +4,7 @@ ul.menu {
 	li {
 		display: inline;
 		a {
-			padding: 10px;
+			padding: 15px;
 			color: $gray;
 			letter-spacing:0.5px;
 			&:hover{
@@ -22,6 +22,7 @@ ul.menu {
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
+	padding: 4rem 0;
 }
 
 
