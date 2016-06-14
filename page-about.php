@@ -2,7 +2,7 @@
 <?php get_header();  ?>
 
 <div class="about-main">
-  <div class="about-header" style="background: url('<?php echo get_featured_image_url($post); ?>') center center no-repeat; background-size:cover">
+  <div class="about-header" style="background: url('<?php echo get_featured_image_url($post); ?>') center top no-repeat; background-size:cover;">
   </div>
   <div class="container about-container clearfix">
     <div class="about-headshot">
@@ -10,6 +10,7 @@
          $portfolioImage = get_field('headshot');
         ?>
         <img src="<?php echo $portfolioImage['url']?>" /> 
+        <p class="credit"><?php the_field('photo_credit')?></p> 
     </div>
     <div class="about-content">
       <?php // Start the loop ?>

@@ -16,16 +16,18 @@
 	.home-text{
 		width:90%;
 	}
-	// .home-header,
-	// .header-image{
-	// 	height:inherit;
-	// }
+	.skills,
+	.contact{
+		.content{
+			width:90%;
+		}	
+	}
 	.home-header{
 		margin-left:5%;
+		padding-bottom:20%;
 	}
 	.home-text{
 		font-size:2rem;
-		margin-bottom:3rem;
 	}
 	.social{
 		display:none;
@@ -80,11 +82,24 @@
 			order:1;
 		}
 	}	
+	.form-inputs{
+		flex-direction:column;
+		.name,
+		.email{
+			width:100%;
+		}
+	}
+	.contact-form fieldset .message{
+		padding-top:4px;
+	}
+	.contact-form{
+		width:80%;
+	}
 }
 
 @media only screen and (min-width:481px) and (max-width:667px){
 	.work{
-		width:50%;
+		width:calc(50% - 2%);
 	}
 	.work-overlay{
 		top:55%;
@@ -113,10 +128,23 @@
 	.process-step{
 		width:100%;
 	}
+	.form-inputs{
+		flex-direction:column;
+		.name,
+		.email{
+			width:100%;
+		}
+	}
+	.contact-form fieldset .message{
+		padding-top:4px;
+	}
+	.contact-form{
+		width:80%;
+	}	
 }
 @media only screen and (min-width:668px) and (max-width:768px){
 	.work{
-		width:50%;
+		width:calc(50% - 2%);
 	}
 	.work-overlay{
 		top:60%;
@@ -133,6 +161,9 @@
 	}
 }
 @media only screen and (min-width:769px) and (max-width:980px){
+	.work{
+		width:calc(33.3% - 2%);
+	}
 	.work-overlay{
 		top:65%;
 	}

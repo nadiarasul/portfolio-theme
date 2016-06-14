@@ -27,6 +27,7 @@ html{
 }
 
 img {
+	width: 100%;
 	max-width: 100%;
 	display:block;
 }
@@ -46,10 +47,15 @@ footer{
 }
 
 .portfolio-container{
-	width:100%
+	width:90%;
+	margin:0 auto;
 }
 .about-main{
 	background:$lightpink;
+}
+
+.portfolio-main{
+	background:$gray;
 }
 .single-main{
 	background:$lightgray;
@@ -57,7 +63,8 @@ footer{
 
 .about-container,
 .single-container,
-.single-image-container{
+.single-image-container,
+.portfolio-container{
 	padding:6rem 0;
 }
 
@@ -103,16 +110,21 @@ Home Styling
 	justify-content:space-around;
 	height:calc(100vh - 70px);
 	padding-top:10%;
+	padding-bottom:5%;
 
 	img{
 		width:50px;
 	}
 }
 .site-branding a{
+	font-family: 'Playfair Display', serif;
 	color:$gray;
 	&:hover{
 		color:$blue;
 	}
+}
+.home-text{
+	margin:auto;
 }
 .more{
 	font-family:'Lato';
@@ -126,6 +138,14 @@ Home Styling
 	background: $lightpink;
 	height:calc(100vh - 70px);
 	padding-bottom:2rem;
+}
+.header-image{
+	background-image:url('images/pattern.png');
+}
+.about-header{
+	background: $lightpink;
+	height:calc(80vh - 70px);
+	padding-bottom:2rem;	
 }
 .skills{
 	background:$lightpink;
@@ -161,49 +181,125 @@ Home Styling
 		font-size:2rem;
 		letter-spacing:0.05rem;
 		font-weight:300;
+		text-align:center;
+	}
+
+}
+
+.contact-form{
+	width:60%;
+	margin:0 auto;
+	textarea{
+		width:100%;
+		margin-top:4px;
+	}
+	fieldset{
+		textarea,
+		input[type=text],
+		input[type=email]{
+			background:lighten($gray, 20);
+			padding:4px;
+			color:white;
+			outline:none;
+			border:2px solid lighten($gray, 20);
+			&:active,
+			&:focus{
+				border:2px solid $blue;
+			}
+		}
+		input[type=submit]{
+			background:$blue;
+			color:white;
+			border:2px solid $blue;
+			padding:8px 10px;
+			line-height:1;
+			&:hover,
+			&:active{
+				background: $gray;
+			}
+		}
+		border:none;
+	.message{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		padding-top:2rem;
+	}
+	.submit{
+		padding-top:2rem;
+		text-align: right;
+
+
+	}	
 	}
 }
+.form-inputs{
+	display:flex;
+	justify-content:space-between;
+	width:100%;
+	
+	label{
+		display:block;
+		padding:4px 0;
+	}
+	input{
+		width:100%;
+	}
+	.send-button{
+		float:right;
+	}
+	.name,
+	.email{
+		width:45%;
+	}	
+}
+
 
 /*
 ====================================
 Portfolio Styling
 ====================================
 */
+.section-title{
+		padding-bottom: 2rem;
+		text-align:center;
+		color:$white;
+	}
 
-.work{
-	width:25%;
-	float:left;
-	position:relative;
-	overflow:hidden;
-}
-
-.work-overlay{
-	position:absolute;
-	bottom:-50%;
-	top:70%;
-	left:0;
-	right:0;
-	opacity:0.8;
-	background:$black;
-	transition:all 0.3s ease;
+.portfolio-items{
 	display:flex;
-	flex-direction:column;
-	justify-content:flex-start;
+	flex-wrap:wrap;
+	justify-content:space-between;
 	align-items:center;
-	color:$white;
+}	
+.work{
+	width:calc(25% - 2%);
+	margin:1%;
+	background:$white;
 	text-align:center;
-	padding:15% 2% 0;
-	h2{
-		letter-spacing:0.03em;
-	}	
+	box-shadow: 0 2px 9px rgba(0,0,0,0.5);	
+	&:hover{
+		.work-title{
+			color:$blue;
+		}
+	}
 }
 
-.work a:hover .work-overlay,
-.work-overlay:hover{
-		top:0;
-		bottom:0;
-		opacity:0.9;
+.work-title{
+	padding:1rem 0;
+	color:$gray;
+	p{
+		margin:4px 0 0 0;
+		color:lighten($gray, 20);
+		font-size:1.2rem;
+
+	}
+	h2{
+		padding-bottom:0;
+		font-size:2rem;
+	}
 }
+
 
 /*
 ====================================
@@ -263,18 +359,21 @@ About Styling
 	}
 }
 .about-tagline{
-	font-family: 'Playfair';
+	font-family: 'Playfair Display', serif;
 	font-style:italic;
 	letter-spacing:0.05rem;
-	h2{
-		font-weight:300;
-	}
 }
 .process{
 	display:flex;
 	flex-wrap:wrap;
 }
-
+.about-tagline,
+.process{	
+	h2{
+		font-weight:300;
+		font-size:2.4rem;
+	}
+}
 .process-step{
 	width:50%;
 }
@@ -288,6 +387,10 @@ About Styling
 .process-info{
 	width:90%;
 	padding-right:20px;
+}
+.credit{
+	font-size:1.2rem;
+	font-style:italic;
 }
 /*
 ====================================
