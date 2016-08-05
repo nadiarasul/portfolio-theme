@@ -26,7 +26,7 @@
         }// closes while loop
       } //closes if statement
       ?>
-    <div class="process">  
+    <div class="process"> 
         <?php 
           while(has_sub_field('process')){
           ?>  

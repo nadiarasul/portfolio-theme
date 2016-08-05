@@ -269,7 +269,7 @@ Portfolio Styling
 .portfolio-items{
 	display:flex;
 	flex-wrap:wrap;
-	justify-content:space-between;
+	justify-content:center;
 	align-items:center;
 }	
 .work{
@@ -322,7 +322,7 @@ Single Portfolio Page Styling
 	color:$blue;
 	&:hover{
 		background:$blue;
-		color:$gray;
+		color:$white;
 	}
 }
 .portfolio-entry-image{
@@ -362,6 +362,7 @@ About Styling
 	font-family: 'Playfair Display', serif;
 	font-style:italic;
 	letter-spacing:0.05rem;
+	padding-bottom:3rem;
 }
 .process{
 	display:flex;
