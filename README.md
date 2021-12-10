@@ -1,4 +1,4 @@
-# HackerYou Starter Theme
+# Nadia Rasul's Portfolio Theme
 
 This is a simple theme to get you up and running with a new theme in WordPress. 
 
